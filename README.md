@@ -45,3 +45,7 @@ Input the stock symbol, fee rate, and utilization rate and it does the rest.
 * Percentage of shares loaned won't always be at the utilization, but usually near it. I don't have the data to calculate the median for this so assume some slippage.
 * Shares typically get loaned out at the next trading day locate auction in the morning.
 * These stocks can often be fast moving, so you should be comfortable with complex order types.
+
+## Example
+
+![Example usage](https://github.com/gnelabs/EpithyBorrowCheck/blob/main/example/screenshot.png?raw=true)
