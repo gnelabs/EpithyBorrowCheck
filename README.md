@@ -37,7 +37,7 @@ Input the stock symbol, fee rate, and utilization rate and it does the rest.
 
 ## Sharp edges around loan fee arbitrage
 
-* You need a broker that loans out your shares and pays you a split. This broker needs to allow writing options against this position for hedging. Only a few brokers do this, so understand the risks and limitations associated with short selling.
+* You need a broker that loans out your shares and pays you a split. This broker needs to allow writing options against this position for hedging. Only a few brokers do this, so understand the risks and limitations associated with short selling. This script assumes you'll be using IBKR.
 * Short dated high delta ITM call options tend to be frequently early exercised for stocks with high volatility and high loan fees. Be careful not to lose money on the bid and calculate your intrinsic value with prudence.
 * If done properly you should have little or no directional risk, however stocks that go parabolic can cause margin calls.
 * In most cases, you'll be dealing with wide spreads. Use L2 as needed when putting on a position and keep liquidity in mind.
