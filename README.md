@@ -15,10 +15,10 @@ Get free money from short sellers. To be used by experienced traders only.
 
 ### Tradier sandbox API key
 
-Create a Tradier sandbox developer API key. This is free and will allow you to get realtime options data required for this script.
+Create a Tradier sandbox developer account to get an API key. This is free and will allow you to get realtime options data required for this script.
 https://developer.tradier.com/user/sign_up
 
-Paste the key into tradier_bearer.txt file included with this script for it to work. This script will read that file.
+Paste the key into tradier_bearer.txt file included with this script for it to work. This script will read that file from the same directory.
 Should be in the JWT format example: Bearer asdf87aysdf87asydf87asydf87
 
 ### Libraries
@@ -43,6 +43,7 @@ Input the stock symbol, fee rate, and utilization rate and it does the rest.
 * In most cases, you'll be dealing with wide spreads. Use L2 as needed when putting on a position and keep liquidity in mind.
 * If you're near expiration and the stock is close to your collar strike, it's better to manually close the position then to assume pin risk. The calculations conservatively assume you will be doing this.
 * Percentage of shares loaned won't always be at the utilization, but usually near it. I don't have the data to calculate the median for this so assume some slippage.
+* This script only goes off the L1 top of book bid & ask. You may be able to get better fills, but you'll probably lose some of that to utilization slippage. It generally evens out long term.
 * Shares typically get loaned out at the next trading day locate auction in the morning.
 * These stocks can often be fast moving, so you should be comfortable with complex order types.
 
